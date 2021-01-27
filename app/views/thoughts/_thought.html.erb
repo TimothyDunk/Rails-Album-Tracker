@@ -1,0 +1,10 @@
+<% @album.thoughts.each do |thought| %>
+    <p>
+    <strong>Commenter:</strong>
+    <%= thought.commenter %>
+    </p>
+    <p>
+    <strong>Thought:</strong>
+    <%= thought.body %>
+    </p>
+<% end %>

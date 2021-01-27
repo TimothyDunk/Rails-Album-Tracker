@@ -1,0 +1,23 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yusei+Magic&display=swap');
+
+
+p, li, a {
+    font-family: 'Yusei Magic', sans-serif;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #feeafa;
+    font-family: 'Abril Fatface', serif;
+}
+
+body {
+    background-color: #a2d2ff;
+}

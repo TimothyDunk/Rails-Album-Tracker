@@ -1,0 +1,13 @@
+<h1>Albums</h1>
+<ul>
+    <% @albums.each do |album| %>
+        <li>
+            <a href="<%= album_path(album) %>">
+                <%= album.title %><br>
+                <%= album.artist %>
+            </a>
+        </li>
+    <% end %>
+<ul>
+
+<%= link_to "New Album", new_album_path %>

@@ -1,0 +1,40 @@
+<%= form_with model: album do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+        <% album.errors.full_messages_for(:title).each do |message| %>
+            <div>
+                <%= message %>
+            </div>
+        <% end%>
+    </div>
+    <div>
+        <%= form.label :artist %>
+        <%= form.text_field :artist %>
+        <% album.errors.full_messages_for(:artist).each do |message| %>
+            <div>
+                <%= message %>
+            </div>
+        <% end%>
+    </div>
+    <div>
+        <%= form.label :year %>
+        <%= form.number_field :year, in: 1900..2021 %>
+        <% album.errors.full_messages_for(:year).each do |message| %>
+            <div>
+                <%= message %>
+            </div>
+        <% end%>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+    </div>
+    <div>
+        <%= form.label :rating %>
+        <%= form.number_field :rating, in: 1..10 %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

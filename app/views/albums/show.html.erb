@@ -1,0 +1,24 @@
+<h1><%= @album.title %></h1>
+<p> by <%= @album.artist %> </p><br>
+<p> <%= @album.year %> </p><br>
+<p> <%= @album.description %> </p><br>
+<p> Rating: <%= @album.rating %> </p>
+
+<ul>
+    <li>
+        <%= link_to "Albums", root_path %>
+    </li>
+    <li>
+        <%= link_to "Edit", edit_album_path(@album) %>
+    </li>
+    <li>
+        <%= link_to "Delete", album_path(@album), method: :delete, 
+        data: { confirm: "Are you sure?" } %>
+    </li>
+</ul>
+
+<h2>Thoughts.</h2>
+<%= render @album.thoughts %>
+
+<h2>Share a thought.</h2>
+<%= render 'thoughts/form' %>
